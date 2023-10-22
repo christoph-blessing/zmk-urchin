@@ -66,6 +66,12 @@
             key-positions = <13 16>;
             bindings = <&caps_word>;
         };
+        combo_bt_clear {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&bt BT_CLR>;
+            layers = <5>;
+        };
 	};
     
     behaviors {
@@ -143,9 +149,9 @@
         adj_layer {
             label = "ADJ";
             bindings = <
-			&none &none &none &none &none    &none &none      &none      &none      &none
-			&none &none &none &none &none    &none &bt BT_NXT &bt BT_PRV &bt BT_CLR &none
-			&none &none &none &none &none    &none &none      &none      &none      &none
+			&none &none &none &none &none    &none &none      &none      &none         &none
+			&none &none &none &none &none    &none &bt BT_NXT &bt BT_PRV &kp C_AL_LOCK &none
+			&none &none &none &none &none    &none &none      &none      &none         &none
 							  &none &none    &none &none  
 			>;
         };
