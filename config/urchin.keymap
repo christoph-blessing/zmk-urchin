@@ -49,28 +49,35 @@
 
 	combos {
 		compatible = "zmk,combos";
-		// both left thumb keys
 		combo_del {
 			timeout-ms = <50>;
 			key-positions = <30 31>;
 			bindings = <&kp DEL>;
 		};
-		// both right thumb keys
+		combo_equal {
+			timeout-ms = <50>;
+			key-positions = <11 12>;
+			bindings = <&kp EQUAL>;
+		};
+		combo_underscore {
+			timeout-ms = <50>;
+			key-positions = <12 13>;
+			bindings = <&kp UNDERSCORE>;
+		};
 		combo_esc {
 			timeout-ms = <50>;
-			key-positions = <32 33>;
+			key-positions = <16 17>;
 			bindings = <&kp ESC>;
 		};
+        combo_colon {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp LS(SEMICOLON)>;
+        };
         combo_caps_word {
             timeout-ms = <50>;
             key-positions = <13 16>;
             bindings = <&caps_word>;
-        };
-        combo_bt_clear {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&bt BT_CLR>;
-            layers = <5>;
         };
 	};
     
@@ -100,7 +107,7 @@
 			label = "QWERTY";
 			bindings = <
 			&kp Q       &kp W       &kp E        &kp R              &kp T          &kp Y          &kp U         &kp I        &kp O       &kp P 
-			&bhm LGUI A &bhm LALT S &bhm LCTRL D &bhm LSHIFT F      &kp G          &kp H          &bhm RSHIFT J &bhm RCTRL K &bhm RALT L &bhm RGUI SEMICOLON
+			&bhm LGUI A &bhm LALT S &bhm LCTRL D &bhm LSHIFT F      &kp G          &kp H          &bhm RSHIFT J &bhm RCTRL K &bhm RALT L &bhm RGUI DOUBLE_QUOTES
 			&kp Z       &kp X       &kp C        &kp V              &kp B          &kp N          &kp M         &kp COMMA    &kp DOT     &kp SLASH
 							                     &lt NAV BACKSPACE  &lt FUN TAB    &lt SYM RETURN &lt NUM SPACE
 			>;
@@ -119,10 +126,10 @@
 		sym_layer {
 			label = "SYM";
 			bindings = <
-			&kp TILDE      &kp AMPERSAND   &kp ASTERISK &kp LPAR   &kp PIPE             &trans &trans &trans &trans &trans
-			&kp LEFT_BRACE &kp CARET       &kp PERCENT  &kp DOLLAR &kp RIGHT_BRACE      &ae    &oe    &ue    &ss    &trans
-			&kp UNDERSCORE &kp EXCLAMATION &kp AT_SIGN  &kp HASH   &kp PLUS			    &trans &trans &trans &trans &trans
-														&kp RPAR   &kp DOUBLE_QUOTES    &trans &trans
+			&kp TILDE      &kp AMPERSAND   &kp ASTERISK &kp LPAR   &kp PIPE        &trans &trans &trans &trans &trans
+			&kp LEFT_BRACE &kp CARET       &kp PERCENT  &kp DOLLAR &kp RIGHT_BRACE &ae    &oe    &ue    &ss    &trans
+			&kp UNDERSCORE &kp EXCLAMATION &kp AT_SIGN  &kp HASH   &kp PLUS		   &trans &trans &trans &trans &trans
+														&kp RPAR   &kp SEMICOLON   &trans &trans
 			>;
 		};
 
@@ -149,10 +156,10 @@
         adj_layer {
             label = "ADJ";
             bindings = <
-			&none &none &none &none &none    &none &none      &none      &none         &none
-			&none &none &none &none &none    &none &bt BT_NXT &bt BT_PRV &kp C_AL_LOCK &none
-			&none &none &none &none &none    &none &none      &none      &none         &none
-							  &none &none    &none &none  
+			&none &none &none &none &none    &none      &none      &none      &none         &none
+			&none &none &none &none &none    &bt BT_CLR &bt BT_NXT &bt BT_PRV &kp C_AL_LOCK &none
+			&none &none &none &none &none    &none      &none      &none      &none         &none
+							  &none &none    &none      &none  
 			>;
         };
 	};
