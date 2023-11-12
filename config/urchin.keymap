@@ -38,6 +38,9 @@
         ZMK_MACRO(vim_close,
             bindings = <&kp ESC &kp LS(SEMICOLON) &kp Q &kp A &kp RETURN>;
         )
+        ZMK_MACRO(zellij_floating,
+            bindings = <&kp LC(P) &kp W &kp RETURN>;
+        )
     };
 
 	combos {
@@ -117,10 +120,10 @@
             key-positions = <16 17 18>;
             bindings = <&vim_close>;
         };
-        combo_f13 {
+        combo_zellij_floating {
             timeout-ms = <50>;
             key-positions = <6 16>;
-            bindings = <&kp F13>;
+            bindings = <&zellij_floating>;
         };
 	};
     
