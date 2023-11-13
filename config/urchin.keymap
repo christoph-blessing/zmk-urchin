@@ -39,7 +39,7 @@
             bindings = <&kp ESC &kp LS(SEMICOLON) &kp Q &kp A &kp RETURN>;
         )
         ZMK_MACRO(zellij_floating,
-            bindings = <&kp LC(P) &kp W &kp RETURN>;
+            bindings = <&kp LC(P) &kp W>;
         )
     };
 
