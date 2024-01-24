@@ -4,11 +4,12 @@
 
 // Layer definitions
 #define QWERTY 0
-#define NUM    1
-#define SYM    2
-#define FUN    3
-#define NAV    4
-#define ADJ    5
+#define DVORAK 1
+#define NUM    2
+#define SYM    3
+#define FUN    4
+#define NAV    5
+#define ADJ    6
 // -----------------
 
 &lt {
@@ -162,8 +163,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         try_layer {
-            if-layers = <2 3>;
-            then-layer = <5>;
+            if-layers = <3 4>;
+            then-layer = <6>;
         };
     };
 
@@ -175,6 +176,16 @@
 			&kp Q       &kp W       &kp E        &kp R              &kp T          &kp Y          &kp U         &kp I        &kp O       &kp P 
 			&bhm LGUI A &bhm LALT S &bhm LCTRL D &bhm LSHIFT F      &kp G          &kp H          &bhm RSHIFT J &bhm RCTRL K &bhm RALT L &bhm RGUI SINGLE_QUOTE
 			&kp Z       &kp X       &kp C        &kp V              &kp B          &kp N          &kp M         &kp COMMA    &kp DOT     &kp SLASH
+							                     &lt NAV BACKSPACE  &lt FUN TAB    &lt SYM RETURN &lt NUM SPACE
+			>;
+		};
+
+		dvorak_layer {
+			label = "DVORAK";
+			bindings = <
+			&kp SINGLE_QUOTE       &kp COMMA       &kp DOT        &kp P              &kp Y          &kp F          &kp G         &kp C        &kp R       &kp L 
+			&bhm LGUI A &bhm LALT O &bhm LCTRL E &bhm LSHIFT U      &kp I          &kp D         &bhm RSHIFT H &bhm RCTRL T &bhm RALT N &bhm RGUI S
+			&kp SLASH       &kp Q       &kp J        &kp K              &kp X          &kp B          &kp M         &kp W    &kp V     &kp Z
 							                     &lt NAV BACKSPACE  &lt FUN TAB    &lt SYM RETURN &lt NUM SPACE
 			>;
 		};
@@ -224,7 +235,7 @@
             bindings = <
 			&none &none &none &none &none    &none      &none      &none      &none         &none
 			&none &none &none &none &none    &bt BT_CLR &bt BT_NXT &bt BT_PRV &kp C_AL_LOCK &none
-			&none &none &none &none &none    &none      &none      &none      &none         &none
+			&none &none &none &none &none    &to 0      &to 1      &none      &none         &none
 							  &none &none    &none      &none  
 			>;
         };
