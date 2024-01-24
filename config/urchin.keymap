@@ -183,10 +183,10 @@
 		dvorak_layer {
 			label = "DVORAK";
 			bindings = <
-			&kp SINGLE_QUOTE       &kp COMMA       &kp DOT        &kp P              &kp Y          &kp F          &kp G         &kp C        &kp R       &kp L 
-			&bhm LGUI A &bhm LALT O &bhm LCTRL E &bhm LSHIFT U      &kp I          &kp D         &bhm RSHIFT H &bhm RCTRL T &bhm RALT N &bhm RGUI S
-			&kp SLASH       &kp Q       &kp J        &kp K              &kp X          &kp B          &kp M         &kp W    &kp V     &kp Z
-							                     &lt NAV BACKSPACE  &lt FUN TAB    &lt SYM RETURN &lt NUM SPACE
+			&kp SINGLE_QUOTE &kp COMMA   &kp DOT      &kp P             &kp Y          &kp F          &kp G         &kp C        &kp R       &kp L 
+			&bhm LGUI A      &bhm LALT O &bhm LCTRL E &bhm LSHIFT U     &kp I          &kp D          &bhm RSHIFT H &bhm RCTRL T &bhm RALT N &bhm RGUI S
+			&kp SLASH        &kp Q       &kp J        &kp K             &kp X          &kp B          &kp M         &kp W        &kp V       &kp Z
+							                          &lt NAV BACKSPACE &lt FUN TAB    &lt SYM RETURN &lt NUM SPACE
 			>;
 		};
 
@@ -235,7 +235,7 @@
             bindings = <
 			&none &none &none &none &none    &none      &none      &none      &none         &none
 			&none &none &none &none &none    &bt BT_CLR &bt BT_NXT &bt BT_PRV &kp C_AL_LOCK &none
-			&none &none &none &none &none    &to 0      &to 1      &none      &none         &none
+			&none &none &none &none &none    &none      &tog 1     &none      &none         &none
 							  &none &none    &none      &none  
 			>;
         };
