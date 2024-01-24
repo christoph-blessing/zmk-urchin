@@ -127,17 +127,17 @@
         };
         combo_left_bracket {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             bindings = <&kp LEFT_BRACKET>;
         };
         combo_right_bracket {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <6 7>;
             bindings = <&kp RIGHT_BRACKET>;
         };
         combo_left_brace {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <1 2>;
             bindings = <&kp LEFT_BRACE>;
         };
         combo_right_brace {
@@ -157,22 +157,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>; 
         };
-        double_single_quote: double_single_quote {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOUBLE_SINGLE_QUOTE";
-            #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        mtdsq: mod_tap_double_single_quote {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_DOUBLE_SINGLE_QUOTE";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&double_single_quote>; 
-        };
     };
 
     conditional_layers {
@@ -189,7 +173,7 @@
 			label = "QWERTY";
 			bindings = <
 			&kp Q       &kp W       &kp E        &kp R              &kp T          &kp Y          &kp U         &kp I        &kp O       &kp P 
-			&bhm LGUI A &bhm LALT S &bhm LCTRL D &bhm LSHIFT F      &kp G          &kp H          &bhm RSHIFT J &bhm RCTRL K &bhm RALT L &mtdsq RGUI 0
+			&bhm LGUI A &bhm LALT S &bhm LCTRL D &bhm LSHIFT F      &kp G          &kp H          &bhm RSHIFT J &bhm RCTRL K &bhm RALT L &bhm RGUI SINGLE_QUOTE
 			&kp Z       &kp X       &kp C        &kp V              &kp B          &kp N          &kp M         &kp COMMA    &kp DOT     &kp SLASH
 							                     &lt NAV BACKSPACE  &lt FUN TAB    &lt SYM RETURN &lt NUM SPACE
 			>;
