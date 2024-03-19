@@ -10,7 +10,6 @@
 #define FUN    4
 #define NAV    5
 #define ADJ    6
-#define GAM    7
 // -----------------
 
 &lt {
@@ -51,127 +50,101 @@
 			timeout-ms = <50>;
 			key-positions = <30 31>;
 			bindings = <&kp DEL>;
-            layers = <0 1 2 3 4 5 6>;
 		};
 		combo_lpar {
 			timeout-ms = <50>;
 			key-positions = <2 3>;
 			bindings = <&kp LPAR>;
-            layers = <0 1 2 3 4 5 6>;
 		};
 		combo_rpar {
 			timeout-ms = <50>;
 			key-positions = <6 7>;
 			bindings = <&kp RPAR>;
-            layers = <0 1 2 3 4 5 6>;
 		};
 		combo_equal {
 			timeout-ms = <50>;
 			key-positions = <11 12>;
 			bindings = <&kp EQUAL>;
-            layers = <0 1 2 3 4 5 6>;
 		};
 		combo_underscore {
 			timeout-ms = <50>;
 			key-positions = <12 13>;
 			bindings = <&kp UNDERSCORE>;
-            layers = <0 1 2 3 4 5 6>;
 		};
 		combo_esc {
 			timeout-ms = <50>;
 			key-positions = <16 17>;
 			bindings = <&kp ESC>;
-            layers = <0 1 2 3 4 5 6>;
 		};
         combo_colon {
             timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp LS(SEMICOLON)>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_caps_word {
             timeout-ms = <50>;
             key-positions = <13 16>;
             bindings = <&caps_word>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_caret {
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp CARET>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_dollar {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp DOLLAR>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_arrow {
             timeout-ms = <50>;
             key-positions = <3 13>;
             bindings = <&arrow>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_minus {
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp MINUS>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_semicolon {
             timeout-ms = <50>;
             key-positions = <21 22>;
             bindings = <&kp SEMICOLON>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_vim_write {
             timeout-ms = <50>;
             key-positions = <11 12 13>;
             bindings = <&vim_write>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_vim_close {
             timeout-ms = <50>;
             key-positions = <16 17 18>;
             bindings = <&vim_close>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_zellij_floating {
             timeout-ms = <50>;
             key-positions = <6 16>;
             bindings = <&zellij_floating>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_left_bracket {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp LEFT_BRACKET>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_right_bracket {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp RIGHT_BRACKET>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_left_brace {
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&kp LEFT_BRACE>;
-            layers = <0 1 2 3 4 5 6>;
         };
         combo_right_brace {
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp RIGHT_BRACE>;
-            layers = <0 1 2 3 4 5 6>;
-        };
-        combo_disable_gaming_layer {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&to 0>;
-            layers = <7>;
         };
 	};
     
@@ -262,19 +235,9 @@
             bindings = <
 			&none &none &none &none &none    &none      &none      &none      &none         &none
 			&none &none &none &none &none    &bt BT_CLR &bt BT_NXT &bt BT_PRV &kp C_AL_LOCK &none
-			&none &none &none &none &none    &to 7      &tog 1     &none      &none         &none
+			&none &none &none &none &none    &none      &tog 1     &none      &none         &none
 							  &none &none    &none      &none  
 			>;
         };
-
-		gam_layer {
-			label = "GAM";
-			bindings = <
-			&kp Q &kp W &kp E &kp R         &kp T      &kp Y      &kp U     &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F         &kp G      &kp H      &kp J     &kp K     &kp L   &kp SINGLE_QUOTE
-			&kp Z &kp X &kp C &kp V         &kp B      &kp N      &kp M     &kp COMMA &kp DOT &kp SLASH
-							  &kp BACKSPACE &kp TAB    &kp RETURN &kp SPACE
-			>;
-		};
 	};
 };
