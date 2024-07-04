@@ -212,10 +212,10 @@
         nav_layer {
 			label = "NAV";
 			bindings = <
-			&trans &trans &trans &trans &trans    &trans   &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4)
-			&trans &trans &trans &trans &trans 	  &kp LEFT &kp DOWN   &kp UP     &kp RIGHT  &trans
-			&trans &trans &trans &trans &trans    &kp HOME &kp PG_DN  &kp PG_UP  &kp END    &trans
-								 &trans &trans    &trans   &trans 
+			&trans &trans &trans   &trans &trans    &kp LG(N4) &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp RIGHT
+			&trans &trans &trans   &trans &trans    &trans     &kp LEFT   &trans     &trans     &trans
+			&trans &trans &kp DOWN &kp UP &trans    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
+					       &trans &trans    &trans     &trans 
 			>;
 		};
 
