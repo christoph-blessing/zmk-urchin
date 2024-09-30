@@ -29,6 +29,9 @@
         ZMK_MACRO(ss,
             bindings = <&kp K_APP &kp S &kp S>;
         )
+        ZMK_MACRO(euro,
+            bindings = <&kp K_APP &kp C &kp EQUAL>;
+        )
         ZMK_MACRO(arrow,
             bindings = <&kp MINUS &kp GREATER_THAN>;
         )
@@ -193,9 +196,9 @@
 			label = "SYM";
 			bindings = <
 			&kp TILDE     &kp AMPERSAND   &kp ASTERISK &ae      &oe       &trans &trans &trans &trans &trans
-			&kp GRAVE     &kp PLUS        &kp PERCENT  &kp PIPE &ue       &trans &trans &trans &trans &trans
+			&kp GRAVE     &kp PLUS        &kp PERCENT  &kp PIPE &ue       &trans &euro  &trans &trans &trans
 			&kp BACKSLASH &kp EXCLAMATION &kp AT_SIGN  &kp HASH &ss	      &trans &trans &trans &trans &trans
-										               &trans   &trans    &trans &trans
+								   &trans   &trans    &trans &trans
 			>;
 		};
 
